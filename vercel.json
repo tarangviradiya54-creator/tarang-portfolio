@@ -4,55 +4,55 @@
   "rewrites": [
     {
       "source": "/services/shopify-development",
-      "destination": "/services-shopify-development.html"
+      "destination": "/services-shopify-development"
     },
     {
       "source": "/services/wordpress-development",
-      "destination": "/services-wordpress-development.html"
+      "destination": "/services-wordpress-development"
     },
     {
       "source": "/services/seo-setup",
-      "destination": "/services-seo-setup.html"
+      "destination": "/services-seo-setup"
     },
     {
       "source": "/work/ella-theme-store",
-      "destination": "/work-ella-theme-store.html"
+      "destination": "/work-ella-theme-store"
     },
     {
       "source": "/work/custom-wordpress-theme",
-      "destination": "/work-custom-wordpress-theme.html"
+      "destination": "/work-custom-wordpress-theme"
     },
     {
       "source": "/work/wordpress-plugin",
-      "destination": "/work-wordpress-plugin.html"
+      "destination": "/work-wordpress-plugin"
     },
     {
       "source": "/work/elementor-landing-page",
-      "destination": "/work-elementor-landing-page.html"
+      "destination": "/work-elementor-landing-page"
     },
     {
       "source": "/blog/ella-theme-setup-checklist",
-      "destination": "/blog-ella-theme-setup-checklist.html"
+      "destination": "/blog-ella-theme-setup-checklist"
     },
     {
       "source": "/blog/shopify-liquid-basics",
-      "destination": "/blog-shopify-liquid-basics.html"
+      "destination": "/blog-shopify-liquid-basics"
     },
     {
       "source": "/blog/wordpress-theme-from-scratch",
-      "destination": "/blog-wordpress-theme-from-scratch.html"
+      "destination": "/blog-wordpress-theme-from-scratch"
     },
     {
       "source": "/blog/first-wordpress-plugin",
-      "destination": "/blog-first-wordpress-plugin.html"
+      "destination": "/blog-first-wordpress-plugin"
     },
     {
       "source": "/blog/off-page-seo-small-business",
-      "destination": "/blog-off-page-seo-small-business.html"
+      "destination": "/blog-off-page-seo-small-business"
     },
     {
       "source": "/blog/how-i-use-claude-code",
-      "destination": "/blog-how-i-use-claude-code.html"
+      "destination": "/blog-how-i-use-claude-code"
     }
   ],
   "redirects": [
