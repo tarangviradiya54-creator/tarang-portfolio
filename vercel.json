@@ -19,18 +19,6 @@
       "destination": "/work-ella-theme-store"
     },
     {
-      "source": "/work/custom-wordpress-theme",
-      "destination": "/work-custom-wordpress-theme"
-    },
-    {
-      "source": "/work/wordpress-plugin",
-      "destination": "/work-wordpress-plugin"
-    },
-    {
-      "source": "/work/elementor-landing-page",
-      "destination": "/work-elementor-landing-page"
-    },
-    {
       "source": "/blog/ella-theme-setup-checklist",
       "destination": "/blog-ella-theme-setup-checklist"
     },
@@ -77,21 +65,6 @@
       "permanent": true
     },
     {
-      "source": "/work-custom-wordpress-theme",
-      "destination": "/work/custom-wordpress-theme",
-      "permanent": true
-    },
-    {
-      "source": "/work-wordpress-plugin",
-      "destination": "/work/wordpress-plugin",
-      "permanent": true
-    },
-    {
-      "source": "/work-elementor-landing-page",
-      "destination": "/work/elementor-landing-page",
-      "permanent": true
-    },
-    {
       "source": "/blog-ella-theme-setup-checklist",
       "destination": "/blog/ella-theme-setup-checklist",
       "permanent": true
@@ -119,6 +92,36 @@
     {
       "source": "/blog-how-i-use-claude-code",
       "destination": "/blog/how-i-use-claude-code",
+      "permanent": true
+    },
+    {
+      "source": "/work/custom-wordpress-theme",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/work-custom-wordpress-theme",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/work/wordpress-plugin",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/work-wordpress-plugin",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/work/elementor-landing-page",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/work-elementor-landing-page",
+      "destination": "/work",
       "permanent": true
     }
   ],
