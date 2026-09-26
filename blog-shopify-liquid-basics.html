@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopify Liquid basics for beginners | Tarang Viradiya</title>
+<meta name="description" content="Objects, tags and filters in Liquid, explained with small examples you can try today.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tarang Viradiya">
+<link rel="canonical" href="https://tarang-viradiya.vercel.app/blog/shopify-liquid-basics">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Tarang Viradiya – Blog" href="/rss.xml">
+<meta name="theme-color" content="#0b7a58">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tarang Viradiya">
+<meta property="og:title" content="Shopify Liquid basics for beginners | Tarang Viradiya">
+<meta property="og:description" content="Objects, tags and filters in Liquid, explained with small examples you can try today.">
+<meta property="og:url" content="https://tarang-viradiya.vercel.app/blog/shopify-liquid-basics">
+<meta property="og:image" content="https://tarang-viradiya.vercel.app/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta property="article:published_time" content="2026-09-10"><meta property="article:author" content="https://tarang-viradiya.vercel.app/about">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Liquid basics for beginners | Tarang Viradiya">
+<meta name="twitter:description" content="Objects, tags and filters in Liquid, explained with small examples you can try today.">
+<meta name="twitter:image" content="https://tarang-viradiya.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Shopify Liquid basics for beginners", "description": "Objects, tags and filters in Liquid, explained with small examples you can try today.", "url": "https://tarang-viradiya.vercel.app/blog/shopify-liquid-basics", "mainEntityOfPage": "https://tarang-viradiya.vercel.app/blog/shopify-liquid-basics", "datePublished": "2026-09-10", "dateModified": "2026-09-10", "author": {"@type": "Person", "name": "Tarang Viradiya", "url": "https://tarang-viradiya.vercel.app/about"}, "image": "https://tarang-viradiya.vercel.app/og.png", "inLanguage": "en-IN"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tarang-viradiya.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tarang-viradiya.vercel.app/blog"}, {"@type": "ListItem", "position": 3, "name": "Shopify Liquid basics for beginners", "item": "https://tarang-viradiya.vercel.app/blog/shopify-liquid-basics"}]}]}</script>
+</head>
+<body class="post">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap"><a class="logo" href="/">Tarang<span>.</span>dev</a><nav class="main" aria-label="Main"><ul><li><a href="/work">Work</a></li><li><a href="/services">Services</a></li><li><a href="/blog" aria-current="page">Blog</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></nav></div></header>
+<main id="main"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog">Blog</a></li><li aria-current="page">Shopify Liquid basics for beginners</li></ol></nav>
+<h1>Shopify Liquid basics for beginners</h1>
+<p class="lead"><time datetime="2026-09-10">10 Sep 2026</time> · Objects, tags and filters in Liquid, explained with small examples you can try today.</p>
+<article class="prose">
+<p>Liquid is the template language behind every Shopify theme. It looks odd at first. It's simple once you know the three parts.</p>
+<h2>Objects</h2>
+<p>Objects output data. They use double curly braces.</p>
+<pre><code>{{ product.title }}
+{{ product.price | money }}</code></pre>
+<h2>Tags</h2>
+<p>Tags add logic. They use curly braces with percent signs.</p>
+<pre><code>{% if product.available %}
+  In stock
+{% else %}
+  Sold out
+{% endif %}</code></pre>
+<h2>Filters</h2>
+<p>Filters change output. They come after a pipe.</p>
+<pre><code>{{ product.title | upcase }}
+{{ 'hero.jpg' | asset_url }}</code></pre>
+<h2>Loops</h2>
+<pre><code>{% for product in collection.products limit: 4 %}
+  &lt;h3&gt;{{ product.title }}&lt;/h3&gt;
+{% endfor %}</code></pre>
+<h2>Sections and schema</h2>
+<p>Modern themes are built from sections. Each section has a schema block. That schema creates the settings you see in the theme editor.</p>
+<p>Add a setting in the schema, read it with <code>section.settings</code>, and store owners can change it without touching code.</p>
+<h2>Where to practise</h2>
+<p>Duplicate your theme and edit a small section. Change a heading. Add a setting. Break it, then fix it.</p>
+</article><section class="cta"><div><h2>Need help with your site?</h2><p>I reply within a day.</p></div><a class="btn" href="/contact">Get in touch</a></section>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>© 2026 Tarang Viradiya · Shopify &amp; WordPress developer · Ahmedabad</p>
+<ul><li><a href="/resume">Resume</a></li><li><a href="/blog">Blog</a></li><li><a href="https://www.linkedin.com/in/tarang-viradiya/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="/contact">Contact</a></li></ul>
+</div></footer>
+</body>
+</html>

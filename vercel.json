@@ -1,0 +1,153 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/services/shopify-development",
+      "destination": "/services-shopify-development.html"
+    },
+    {
+      "source": "/services/wordpress-development",
+      "destination": "/services-wordpress-development.html"
+    },
+    {
+      "source": "/services/seo-setup",
+      "destination": "/services-seo-setup.html"
+    },
+    {
+      "source": "/work/ella-theme-store",
+      "destination": "/work-ella-theme-store.html"
+    },
+    {
+      "source": "/work/custom-wordpress-theme",
+      "destination": "/work-custom-wordpress-theme.html"
+    },
+    {
+      "source": "/work/wordpress-plugin",
+      "destination": "/work-wordpress-plugin.html"
+    },
+    {
+      "source": "/work/elementor-landing-page",
+      "destination": "/work-elementor-landing-page.html"
+    },
+    {
+      "source": "/blog/ella-theme-setup-checklist",
+      "destination": "/blog-ella-theme-setup-checklist.html"
+    },
+    {
+      "source": "/blog/shopify-liquid-basics",
+      "destination": "/blog-shopify-liquid-basics.html"
+    },
+    {
+      "source": "/blog/wordpress-theme-from-scratch",
+      "destination": "/blog-wordpress-theme-from-scratch.html"
+    },
+    {
+      "source": "/blog/first-wordpress-plugin",
+      "destination": "/blog-first-wordpress-plugin.html"
+    },
+    {
+      "source": "/blog/off-page-seo-small-business",
+      "destination": "/blog-off-page-seo-small-business.html"
+    },
+    {
+      "source": "/blog/how-i-use-claude-code",
+      "destination": "/blog-how-i-use-claude-code.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/services-shopify-development",
+      "destination": "/services/shopify-development",
+      "permanent": true
+    },
+    {
+      "source": "/services-wordpress-development",
+      "destination": "/services/wordpress-development",
+      "permanent": true
+    },
+    {
+      "source": "/services-seo-setup",
+      "destination": "/services/seo-setup",
+      "permanent": true
+    },
+    {
+      "source": "/work-ella-theme-store",
+      "destination": "/work/ella-theme-store",
+      "permanent": true
+    },
+    {
+      "source": "/work-custom-wordpress-theme",
+      "destination": "/work/custom-wordpress-theme",
+      "permanent": true
+    },
+    {
+      "source": "/work-wordpress-plugin",
+      "destination": "/work/wordpress-plugin",
+      "permanent": true
+    },
+    {
+      "source": "/work-elementor-landing-page",
+      "destination": "/work/elementor-landing-page",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ella-theme-setup-checklist",
+      "destination": "/blog/ella-theme-setup-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/blog-shopify-liquid-basics",
+      "destination": "/blog/shopify-liquid-basics",
+      "permanent": true
+    },
+    {
+      "source": "/blog-wordpress-theme-from-scratch",
+      "destination": "/blog/wordpress-theme-from-scratch",
+      "permanent": true
+    },
+    {
+      "source": "/blog-first-wordpress-plugin",
+      "destination": "/blog/first-wordpress-plugin",
+      "permanent": true
+    },
+    {
+      "source": "/blog-off-page-seo-small-business",
+      "destination": "/blog/off-page-seo-small-business",
+      "permanent": true
+    },
+    {
+      "source": "/blog-how-i-use-claude-code",
+      "destination": "/blog/how-i-use-claude-code",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/(styles.css|favicon.svg|og.png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
+}

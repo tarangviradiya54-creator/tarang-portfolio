@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom WordPress theme – Project | Tarang Viradiya</title>
+<meta name="description" content="A theme built from a blank folder on the template hierarchy. A self-learning project by Tarang Viradiya.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tarang Viradiya">
+<link rel="canonical" href="https://tarang-viradiya.vercel.app/work/custom-wordpress-theme">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Tarang Viradiya – Blog" href="/rss.xml">
+<meta name="theme-color" content="#0b7a58">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tarang Viradiya">
+<meta property="og:title" content="Custom WordPress theme – Project | Tarang Viradiya">
+<meta property="og:description" content="A theme built from a blank folder on the template hierarchy. A self-learning project by Tarang Viradiya.">
+<meta property="og:url" content="https://tarang-viradiya.vercel.app/work/custom-wordpress-theme">
+<meta property="og:image" content="https://tarang-viradiya.vercel.app/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom WordPress theme – Project | Tarang Viradiya">
+<meta name="twitter:description" content="A theme built from a blank folder on the template hierarchy. A self-learning project by Tarang Viradiya.">
+<meta name="twitter:image" content="https://tarang-viradiya.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CreativeWork", "name": "Custom WordPress theme", "description": "A theme built from a blank folder on the template hierarchy. A self-learning project by Tarang Viradiya.", "url": "https://tarang-viradiya.vercel.app/work/custom-wordpress-theme", "creator": {"@type": "Person", "name": "Tarang Viradiya"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tarang-viradiya.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://tarang-viradiya.vercel.app/work"}, {"@type": "ListItem", "position": 3, "name": "Custom WordPress theme", "item": "https://tarang-viradiya.vercel.app/work/custom-wordpress-theme"}]}]}</script>
+</head>
+<body class="work">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap"><a class="logo" href="/">Tarang<span>.</span>dev</a><nav class="main" aria-label="Main"><ul><li><a href="/work" aria-current="page">Work</a></li><li><a href="/services">Services</a></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></nav></div></header>
+<main id="main"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/work">Work</a></li><li aria-current="page">Custom WordPress theme</li></ol></nav>
+<h1>Custom WordPress theme</h1>
+<p class="lead"><span class="eyebrow">WordPress · PHP</span> A theme built from a blank folder on the template hierarchy.</p>
+<div class="prose">
+<h2>The goal</h2>
+<p>Build a WordPress theme with no starter theme and no page builder.</p>
+<h2>What I did</h2>
+<ul>
+<li>Started from a blank folder with <code>style.css</code> and <code>index.php</code>.</li>
+<li>Added templates for pages, single posts and archives.</li>
+<li>Registered a custom post type and menus.</li>
+<li>Added widget areas in the sidebar and footer.</li>
+<li>Loaded CSS and JS with <code>wp_enqueue_scripts</code>, not hard-coded tags.</li>
+</ul>
+<pre><code>add_action( 'wp_enqueue_scripts', function () {
+  wp_enqueue_style( 'theme', get_stylesheet_uri(), [], '1.0' );
+} );</code></pre>
+<h2>What I learned</h2>
+<p>The template hierarchy decides which file loads. Once that clicks, WordPress stops feeling like magic.</p>
+<p>Full walkthrough: <a href="/blog/wordpress-theme-from-scratch">Building a WordPress theme from scratch</a>.</p>
+</div><section class="cta"><div><h2>Need this for your site?</h2><p>I reply within a day.</p></div><a class="btn" href="/contact">Get in touch</a></section>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>© 2026 Tarang Viradiya · Shopify &amp; WordPress developer · Ahmedabad</p>
+<ul><li><a href="/resume">Resume</a></li><li><a href="/blog">Blog</a></li><li><a href="https://www.linkedin.com/in/tarang-viradiya/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="/contact">Contact</a></li></ul>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a WordPress theme from scratch | Tarang Viradiya</title>
+<meta name="description" content="The files you need, the template hierarchy, and how to load CSS and JS the right way.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tarang Viradiya">
+<link rel="canonical" href="https://tarang-viradiya.vercel.app/blog/wordpress-theme-from-scratch">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Tarang Viradiya – Blog" href="/rss.xml">
+<meta name="theme-color" content="#0b7a58">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tarang Viradiya">
+<meta property="og:title" content="Building a WordPress theme from scratch | Tarang Viradiya">
+<meta property="og:description" content="The files you need, the template hierarchy, and how to load CSS and JS the right way.">
+<meta property="og:url" content="https://tarang-viradiya.vercel.app/blog/wordpress-theme-from-scratch">
+<meta property="og:image" content="https://tarang-viradiya.vercel.app/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta property="article:published_time" content="2026-09-14"><meta property="article:author" content="https://tarang-viradiya.vercel.app/about">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building a WordPress theme from scratch | Tarang Viradiya">
+<meta name="twitter:description" content="The files you need, the template hierarchy, and how to load CSS and JS the right way.">
+<meta name="twitter:image" content="https://tarang-viradiya.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Building a WordPress theme from scratch", "description": "The files you need, the template hierarchy, and how to load CSS and JS the right way.", "url": "https://tarang-viradiya.vercel.app/blog/wordpress-theme-from-scratch", "mainEntityOfPage": "https://tarang-viradiya.vercel.app/blog/wordpress-theme-from-scratch", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "author": {"@type": "Person", "name": "Tarang Viradiya", "url": "https://tarang-viradiya.vercel.app/about"}, "image": "https://tarang-viradiya.vercel.app/og.png", "inLanguage": "en-IN"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tarang-viradiya.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tarang-viradiya.vercel.app/blog"}, {"@type": "ListItem", "position": 3, "name": "Building a WordPress theme from scratch", "item": "https://tarang-viradiya.vercel.app/blog/wordpress-theme-from-scratch"}]}]}</script>
+</head>
+<body class="post">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap"><a class="logo" href="/">Tarang<span>.</span>dev</a><nav class="main" aria-label="Main"><ul><li><a href="/work">Work</a></li><li><a href="/services">Services</a></li><li><a href="/blog" aria-current="page">Blog</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></nav></div></header>
+<main id="main"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog">Blog</a></li><li aria-current="page">Building a WordPress theme from scratch</li></ol></nav>
+<h1>Building a WordPress theme from scratch</h1>
+<p class="lead"><time datetime="2026-09-14">14 Sep 2026</time> · The files you need, the template hierarchy, and how to load CSS and JS the right way.</p>
+<article class="prose">
+<p>Starter themes are great. But building one from zero once teaches you how WordPress really works.</p>
+<h2>The two files you need</h2>
+<p>A theme only needs <code>style.css</code> with a header comment and an <code>index.php</code>.</p>
+<pre><code>/*
+Theme Name: My Theme
+Version: 1.0
+*/</code></pre>
+<h2>The template hierarchy</h2>
+<p>WordPress looks for the most specific template first. For a single post it tries <code>single-post.php</code>, then <code>single.php</code>, then <code>index.php</code>.</p>
+<p>Add files only when you need a different layout.</p>
+<h2>functions.php</h2>
+<p>This is where you turn on features and load assets.</p>
+<pre><code>add_action( 'after_setup_theme', function () {
+  add_theme_support( 'title-tag' );
+  add_theme_support( 'post-thumbnails' );
+  register_nav_menus( [ 'primary' =&gt; 'Primary menu' ] );
+} );</code></pre>
+<h2>Load CSS and JS properly</h2>
+<p>Use <code>wp_enqueue_style</code> and <code>wp_enqueue_script</code>. Never hard-code link tags in the header. Plugins depend on this.</p>
+<h2>header.php and footer.php</h2>
+<p>Split the shared parts out. Call <code>wp_head()</code> and <code>wp_footer()</code>. Many plugins break without them.</p>
+<h2>Next steps</h2>
+<ul><li>Add a custom post type.</li><li>Register widget areas.</li><li>Add a page template for landing pages.</li></ul>
+</article><section class="cta"><div><h2>Need help with your site?</h2><p>I reply within a day.</p></div><a class="btn" href="/contact">Get in touch</a></section>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>© 2026 Tarang Viradiya · Shopify &amp; WordPress developer · Ahmedabad</p>
+<ul><li><a href="/resume">Resume</a></li><li><a href="/blog">Blog</a></li><li><a href="https://www.linkedin.com/in/tarang-viradiya/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="/contact">Contact</a></li></ul>
+</div></footer>
+</body>
+</html>

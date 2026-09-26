@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My first WordPress plugin, step by step | Tarang Viradiya</title>
+<meta name="description" content="A tiny plugin with a shortcode and a settings page. The whole thing fits in one file.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tarang Viradiya">
+<link rel="canonical" href="https://tarang-viradiya.vercel.app/blog/first-wordpress-plugin">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Tarang Viradiya – Blog" href="/rss.xml">
+<meta name="theme-color" content="#0b7a58">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tarang Viradiya">
+<meta property="og:title" content="My first WordPress plugin, step by step | Tarang Viradiya">
+<meta property="og:description" content="A tiny plugin with a shortcode and a settings page. The whole thing fits in one file.">
+<meta property="og:url" content="https://tarang-viradiya.vercel.app/blog/first-wordpress-plugin">
+<meta property="og:image" content="https://tarang-viradiya.vercel.app/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta property="article:published_time" content="2026-09-18"><meta property="article:author" content="https://tarang-viradiya.vercel.app/about">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My first WordPress plugin, step by step | Tarang Viradiya">
+<meta name="twitter:description" content="A tiny plugin with a shortcode and a settings page. The whole thing fits in one file.">
+<meta name="twitter:image" content="https://tarang-viradiya.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "My first WordPress plugin, step by step", "description": "A tiny plugin with a shortcode and a settings page. The whole thing fits in one file.", "url": "https://tarang-viradiya.vercel.app/blog/first-wordpress-plugin", "mainEntityOfPage": "https://tarang-viradiya.vercel.app/blog/first-wordpress-plugin", "datePublished": "2026-09-18", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Tarang Viradiya", "url": "https://tarang-viradiya.vercel.app/about"}, "image": "https://tarang-viradiya.vercel.app/og.png", "inLanguage": "en-IN"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tarang-viradiya.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tarang-viradiya.vercel.app/blog"}, {"@type": "ListItem", "position": 3, "name": "My first WordPress plugin, step by step", "item": "https://tarang-viradiya.vercel.app/blog/first-wordpress-plugin"}]}]}</script>
+</head>
+<body class="post">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap"><a class="logo" href="/">Tarang<span>.</span>dev</a><nav class="main" aria-label="Main"><ul><li><a href="/work">Work</a></li><li><a href="/services">Services</a></li><li><a href="/blog" aria-current="page">Blog</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></nav></div></header>
+<main id="main"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog">Blog</a></li><li aria-current="page">My first WordPress plugin, step by step</li></ol></nav>
+<h1>My first WordPress plugin, step by step</h1>
+<p class="lead"><time datetime="2026-09-18">18 Sep 2026</time> · A tiny plugin with a shortcode and a settings page. The whole thing fits in one file.</p>
+<article class="prose">
+<p>My first plugin did one small thing: show a notice box anywhere with a shortcode. Here's how it works.</p>
+<h2>The plugin header</h2>
+<pre><code>&lt;?php
+/**
+ * Plugin Name: TV Notice
+ * Version: 1.0
+ */
+defined( 'ABSPATH' ) || exit;</code></pre>
+<p>The last line stops direct access to the file.</p>
+<h2>The shortcode</h2>
+<pre><code>add_shortcode( 'notice', function () {
+  $text = get_option( 'tv_notice_text', 'Hello' );
+  return '&lt;div class="tv-notice"&gt;' . esc_html( $text ) . '&lt;/div&gt;';
+} );</code></pre>
+<p>Always escape output. <code>esc_html</code> stops broken HTML and script injection.</p>
+<h2>A settings page</h2>
+<p>I used the Settings API. It handles saving and security for you.</p>
+<pre><code>add_action( 'admin_init', function () {
+  register_setting( 'tv_notice', 'tv_notice_text', [
+    'sanitize_callback' =&gt; 'sanitize_text_field',
+  ] );
+} );</code></pre>
+<p>Then add a page under Settings with <code>add_options_page</code> and print the form.</p>
+<h2>What I'd tell a beginner</h2>
+<ul><li>Start with one file.</li><li>Learn actions and filters first.</li><li>Sanitise input. Escape output. Every time.</li></ul>
+</article><section class="cta"><div><h2>Need help with your site?</h2><p>I reply within a day.</p></div><a class="btn" href="/contact">Get in touch</a></section>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>© 2026 Tarang Viradiya · Shopify &amp; WordPress developer · Ahmedabad</p>
+<ul><li><a href="/resume">Resume</a></li><li><a href="/blog">Blog</a></li><li><a href="https://www.linkedin.com/in/tarang-viradiya/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="/contact">Contact</a></li></ul>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small WordPress plugin – Project | Tarang Viradiya</title>
+<meta name="description" content="Hooks, a shortcode and an admin settings page. No bloat. A self-learning project by Tarang Viradiya.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Tarang Viradiya">
+<link rel="canonical" href="https://tarang-viradiya.vercel.app/work/wordpress-plugin">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Tarang Viradiya – Blog" href="/rss.xml">
+<meta name="theme-color" content="#0b7a58">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tarang Viradiya">
+<meta property="og:title" content="Small WordPress plugin – Project | Tarang Viradiya">
+<meta property="og:description" content="Hooks, a shortcode and an admin settings page. No bloat. A self-learning project by Tarang Viradiya.">
+<meta property="og:url" content="https://tarang-viradiya.vercel.app/work/wordpress-plugin">
+<meta property="og:image" content="https://tarang-viradiya.vercel.app/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Small WordPress plugin – Project | Tarang Viradiya">
+<meta name="twitter:description" content="Hooks, a shortcode and an admin settings page. No bloat. A self-learning project by Tarang Viradiya.">
+<meta name="twitter:image" content="https://tarang-viradiya.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CreativeWork", "name": "Small WordPress plugin", "description": "Hooks, a shortcode and an admin settings page. No bloat. A self-learning project by Tarang Viradiya.", "url": "https://tarang-viradiya.vercel.app/work/wordpress-plugin", "creator": {"@type": "Person", "name": "Tarang Viradiya"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tarang-viradiya.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://tarang-viradiya.vercel.app/work"}, {"@type": "ListItem", "position": 3, "name": "Small WordPress plugin", "item": "https://tarang-viradiya.vercel.app/work/wordpress-plugin"}]}]}</script>
+</head>
+<body class="work">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap"><a class="logo" href="/">Tarang<span>.</span>dev</a><nav class="main" aria-label="Main"><ul><li><a href="/work" aria-current="page">Work</a></li><li><a href="/services">Services</a></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></nav></div></header>
+<main id="main"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/work">Work</a></li><li aria-current="page">Small WordPress plugin</li></ol></nav>
+<h1>Small WordPress plugin</h1>
+<p class="lead"><span class="eyebrow">WordPress · PHP</span> Hooks, a shortcode and an admin settings page. No bloat.</p>
+<div class="prose">
+<h2>The goal</h2>
+<p>Replace a heavy plugin with a small one that does one job well.</p>
+<h2>What I did</h2>
+<ul>
+<li>Wrote a single-file plugin with a proper header.</li>
+<li>Added a shortcode that outputs a notice box.</li>
+<li>Built an admin settings page with the Settings API.</li>
+<li>Escaped output and sanitised input.</li>
+</ul>
+<pre><code>add_shortcode( 'notice', function ( $atts ) {
+  $text = get_option( 'tv_notice_text', 'Hello' );
+  return '&lt;div class="tv-notice"&gt;' . esc_html( $text ) . '&lt;/div&gt;';
+} );</code></pre>
+<h2>What I learned</h2>
+<p>Hooks are the whole game. Actions do things. Filters change things.</p>
+<p>Step by step: <a href="/blog/first-wordpress-plugin">My first WordPress plugin</a>.</p>
+</div><section class="cta"><div><h2>Need this for your site?</h2><p>I reply within a day.</p></div><a class="btn" href="/contact">Get in touch</a></section>
+</div></main>
+<footer class="site"><div class="wrap">
+<p>© 2026 Tarang Viradiya · Shopify &amp; WordPress developer · Ahmedabad</p>
+<ul><li><a href="/resume">Resume</a></li><li><a href="/blog">Blog</a></li><li><a href="https://www.linkedin.com/in/tarang-viradiya/" rel="me noopener" target="_blank">LinkedIn</a></li><li><a href="/contact">Contact</a></li></ul>
+</div></footer>
+</body>
+</html>
