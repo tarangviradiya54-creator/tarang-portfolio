@@ -15,6 +15,10 @@
       "destination": "/services-seo-setup"
     },
     {
+      "source": "/work/lume-skin-woocommerce",
+      "destination": "/work-lume-skin-woocommerce"
+    },
+    {
       "source": "/work/ella-theme-store",
       "destination": "/work-ella-theme-store"
     },
@@ -57,6 +61,11 @@
     {
       "source": "/services-seo-setup",
       "destination": "/services/seo-setup",
+      "permanent": true
+    },
+    {
+      "source": "/work-lume-skin-woocommerce",
+      "destination": "/work/lume-skin-woocommerce",
       "permanent": true
     },
     {
