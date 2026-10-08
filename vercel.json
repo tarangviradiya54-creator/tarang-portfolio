@@ -15,6 +15,10 @@
       "destination": "/services-seo-setup"
     },
     {
+      "source": "/work/halden-home-co",
+      "destination": "/work-halden-home-co"
+    },
+    {
       "source": "/work/lume-skin-woocommerce",
       "destination": "/work-lume-skin-woocommerce"
     },
@@ -61,6 +65,11 @@
     {
       "source": "/services-seo-setup",
       "destination": "/services/seo-setup",
+      "permanent": true
+    },
+    {
+      "source": "/work-halden-home-co",
+      "destination": "/work/halden-home-co",
       "permanent": true
     },
     {
